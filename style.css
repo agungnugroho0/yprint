@@ -1,0 +1,256 @@
+:root{
+    --halaman: #FBF8F1;
+    --nama: "Y INVITATION";
+    --color:#70888b;
+}
+
+*{
+    margin:0pc;
+    padding:0px;
+}
+
+body{
+    background-color: var(--halaman);
+    font-family: 'Roboto', sans-serif;
+    color:var(--color);
+    
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ----------------------------------------- */
+
+
+
+
+/*----------------- Header --------------------*/
+header{
+    display: grid;
+    /* background-image: url(header.jpg);
+    background-clip:border-box;
+    background-size: cover; */
+    
+}
+
+header > .menu{
+    display: grid;
+    grid-template-areas: 'logo menuku';
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+}
+
+
+
+header>.menu .l{
+    display: grid;
+    grid-area: logo;
+    padding:20px;
+    padding-left:50px;
+    grid-template-columns: 0fr 1fr;
+    align-items: center;
+}
+
+header>.menu>.l img{
+    max-height: 40px;
+}
+header>.menu .l::after{
+    content: var(--nama);
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+header>.menu>.pilih{
+    display: grid;
+    grid-area: menuku;
+    height: 44px;
+}
+
+header>.menu>.pilih>ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(50px, 1fr));
+    gap:10px;
+
+    
+}
+
+
+.pilih>ul>li >a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pilih>ul>li>a> .material-icons {
+    padding-right: 5px;
+}
+
+.kheader{
+    display: grid;
+    height: 88vh;
+    box-sizing: border-box;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    gap: 100px;
+}
+
+.kheader>.h1>h1{
+    font-weight: 800;
+    font-size: 4em;
+    color:var(--color);
+}
+
+.kheader>.h1>h1>span{
+    color:#1F4690;
+}
+
+.kheader .gambar{
+    display: flex;
+    align-self: stretch;
+}
+
+.kheader .gambar{
+    background-image: url('image/amplop.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.tag{
+    display: flex;
+    background-color: #1F4690;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    flex-grow: wrap;
+    font-size: 2em;
+    font-family:'Poppins', sans-serif, calibri;
+    color: #FBF8F1;
+    text-align: center;
+}
+
+
+.tag2{
+    display: flex;
+    background-color: #1F4690;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    flex-grow: wrap;
+    font-size: 2em;
+    font-family:'Poppins', sans-serif, calibri;
+    color: #FBF8F1;
+    text-align: center;
+}
+/*------------------------ CONTENT----------------- */
+.main{
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    flex-flow: row wrap;
+    padding-top: 30px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.main2{
+    flex: 2;
+}
+
+.main2 h2{
+    font-size: 2rem;
+    flex-grow: 2;
+}
+
+/* ------------------------------------- */
+
+@media screen and (max-width:950px){
+    .kheader{
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+        padding-left: 80px;
+        padding-right: 80px;
+        margin-bottom: 0;
+        row-gap: 0px;
+        
+    }
+
+    
+    .kheader> .gambar{
+        display: none;
+        /* margin-top: -20px;
+        padding: 10px;
+        background-position: top;
+         */
+    }
+
+    header>.menu>.pilih{
+        margin-right: 10%;
+    }
+    
+    
+    .tag{
+        font-size: 1.3em;
+        margin:0px;
+        position: relative;
+        top:50px;
+    }
+    
+    .tag2{
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width:792px){
+    header>.menu>.pilih{
+        display: none;
+    }
+
+}
+@media screen and (max-width:700px){
+    header> .menu>.l::after{
+        content: "";
+    }
+
+    header>.menu>.l img{
+        max-height: 30px;
+    }
+
+
+    .kheader{
+        padding: 50px 22px 10px 22px;
+        height: fit-content;
+
+    }
+
+
+    header>.menu .l{
+        padding:20px;
+    }
+
+    .kheader>.h1>h1{
+        font-size: 3em;
+    }
+
+    .tag{
+        font-size: 1.3em;
+        padding-left:10px;
+        margin:0px;
+        position: relative;
+        top:50px;
+    }
+    
+    .tag2{
+        padding-left:10px;
+        font-size: 1.3em;
+    }
+}
